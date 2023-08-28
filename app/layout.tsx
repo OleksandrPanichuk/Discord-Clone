@@ -3,7 +3,8 @@ import { Open_Sans } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
 
 import './globals.css'
-import { ModalProvider, ThemeProvider, SocketProvider, QueryProvider } from '@/providers'
+import {  ThemeProvider, SocketProvider, QueryProvider } from '@/providers'
+import {ModalProvider} from '@/providers/modal-provider'
 import { cn } from '@/lib/utils'
 
 
@@ -25,7 +26,7 @@ export default function RootLayout({
         <body className={cn(open_sans.className, 'bg-white dark:bg-[#313338]')}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey='discord-theme'>
             <SocketProvider>
-              <ModalProvider />
+            <ModalProvider />
               <QueryProvider>
                 {children}
               </QueryProvider>

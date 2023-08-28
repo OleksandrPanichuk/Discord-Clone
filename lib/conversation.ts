@@ -33,23 +33,23 @@ const createNewConversation = async (memberOneId: string, memberTwoId: string) =
     return await db.conversation.create({
       data: {
         memberOneId,
-        memberTwoId
+        memberTwoId,
       },
       include: {
         memberOne: {
           include: {
-            profile: true
+            profile: true,
           }
         },
         memberTwo: {
           include: {
-            profile: true
+            profile: true,
           }
         }
       }
     })
   } catch {
-    return null
+    return null;
   }
 }
 
