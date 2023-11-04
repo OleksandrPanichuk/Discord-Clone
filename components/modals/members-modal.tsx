@@ -98,7 +98,7 @@ export function MembersModal() {
               <div className='flex flex-col gap-y-1'>
                 <div className='text-xs font-semibold flex items-center gap-x-1'>
                   {member.profile.name}
-                  {roleIconMap[member.role]}
+                  {roleIconMap[member.role] ?? <></>}
                 </div>
                 <p className='text-xs text-zinc-500 dark:text-zinc-400'>
                   {member.profile.email}
