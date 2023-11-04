@@ -8,13 +8,13 @@ import { ServerSidebar } from "@/components/server/server-sidebar"
 
 export const MobileToggle = ({serverId}:{serverId:string}) => {
   return (
-    <Sheet>
+    <Sheet >
       <SheetTrigger asChild>
         <Button variant={'ghost'} size={'icon'} className="md:hidden">
           <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent side={'left'} className="p-0 gap-0 flex">
+      <SheetContent side={'left'} className="p-0 gap-0 flex  ">
         <div className="w-[72px]">
           <NavigationSidebar />
         </div>

@@ -82,13 +82,13 @@ export function MembersModal() {
 
   return (
     <Dialog open={isModalOpen} onOpenChange={onClose}>
-      <DialogContent className='bg-white text-black  overflow-hidden'>
+      <DialogContent className='bg-white dark:text-white dark:bg-zinc-800 text-black  overflow-hidden'>
         <DialogHeader className='pt-8 px-6'>
           <DialogTitle className='text-2xl text-center font-bold'>
             Manage Members
           </DialogTitle>
-          <DialogDescription className='text-center text-zinc-500'>
-            {server?.members?.length} Members
+          <DialogDescription className='text-center text-zinc-500 dark:text-zinc-400'>
+            {server?.members?.length} {server?.members?.length > 1 ? 'Members' : 'Member'}
           </DialogDescription>
         </DialogHeader>
         <ScrollArea className='mt-8 max-h-[420px] pr-6'>
@@ -100,7 +100,7 @@ export function MembersModal() {
                   {member.profile.name}
                   {roleIconMap[member.role]}
                 </div>
-                <p className='text-xs text-zinc-500'>
+                <p className='text-xs text-zinc-500 dark:text-zinc-400'>
                   {member.profile.email}
                 </p>
               </div>
@@ -108,7 +108,7 @@ export function MembersModal() {
                 <div className='ml-auto'>
                   <DropdownMenu>
                     <DropdownMenuTrigger>
-                      <MoreVertical className='h-4 w-4 text-zinc-500' />
+                      <MoreVertical className='h-4 w-4 text-zinc-500 dark:text-zinc-400' />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent side='left'>
                       <DropdownMenuSub>
@@ -145,7 +145,7 @@ export function MembersModal() {
                 </div>
               )}
               {loadingId === member.id && (
-                <Loader2 className='animate-spin text-zinc-500 ml-auto w-4 h-4' />
+                <Loader2 className='animate-spin text-zinc-500 dark:text-zinc-400 ml-auto w-4 h-4' />
               )}
             </div>
           ))}

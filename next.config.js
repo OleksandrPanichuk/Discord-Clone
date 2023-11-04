@@ -3,8 +3,8 @@ const nextConfig = {
   images: {
     domains: ['uploadthing.com']
   },
-  experimental: {
-    serverActions: true
+  experimental :{
+    serverActions:true,
   },
   webpack: (config) => {
     config.externals.push({

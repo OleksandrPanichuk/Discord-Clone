@@ -58,7 +58,7 @@ export const FileUpload: FC<FileUploadProps> = ({ onChange, value, endpoint }) =
     )
   }
   return (
-    <UploadDropzone endpoint={endpoint} onClientUploadComplete={(res) => {
+    <UploadDropzone  endpoint={endpoint} onClientUploadComplete={(res) => {
       onChange({ url: res?.[0].url, key: res?.[0].key })
     }}
       onUploadError={(error: Error) => {

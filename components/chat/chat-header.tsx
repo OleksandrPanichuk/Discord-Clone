@@ -24,7 +24,7 @@ export const ChatHeader: FC<ChatHeaderProps> = ({ serverId, name, type, imageUrl
       <p className="font-semibold text-md text-black dark:text-white">
         {name}
       </p>
-      <div className="ml-auto flex items-center">
+      <div className="ml-auto flex items-center gap-x-1">
         {type === 'conversation' && (
           <ChatVideoButton />
         )}
