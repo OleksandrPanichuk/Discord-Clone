@@ -14,7 +14,7 @@ export const initialProfile = async (): Promise<Profile> => {
 
   if (profile) return profile;
 
-  const username = user.firstName && user.lastName ?  `${user.firstName} ${user.lastName}` : user.username ?? user.emailAddresses[0].emailAddress.split('@')[0]
+  const username = user.firstName ?  `${user.firstName} ${user.lastName ?? ''}` : user.username ?? user.emailAddresses[0].emailAddress.split('@')[0]
 
   const newProfile = await db.profile.create({
     data: {
