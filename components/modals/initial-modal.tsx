@@ -102,7 +102,7 @@ export function InitialModal() {
                     <FormControl>
                       <Input
                         disabled={isLoading}
-                        className={'border border-zinc-400 dark:border-zinc-900 focus-visible:ring-0 text-black focus-visible:ring-offset-0'}
+                        className={'border border-zinc-400 dark:text-white dark:border-zinc-900 focus-visible:ring-0 text-black focus-visible:ring-offset-0'}
                         placeholder='Enter server name'
                         {...field}
                       />
